@@ -2,6 +2,7 @@ package exercicios;
 
 import java.util.Scanner;
 
+
 public class lista_exercicios {
 	public static void main(String[] args){
 	    //q1();
@@ -26,6 +27,14 @@ public class lista_exercicios {
 		//q20();
 		//q21();
 		//q22();
+		//q23();
+		//q24();
+		//q25();
+		//q26();
+		//q27();
+		//q28();
+		//q29();
+		//q30();
 	}
 
 	static Scanner sc = new Scanner(System.in);
@@ -61,7 +70,7 @@ public class lista_exercicios {
         nome = sc.nextLine();
         System.out.println("Digite Salario: ");
         salarioFixo = sc.nextDouble();
-        System.out.println("Digite NÃºmero de Vendas: ");
+        System.out.println("Digite o numero de Vendas: ");
         vendas = sc.nextDouble();
     
         salarioFinal = salarioFixo+(vendas*0.15);
@@ -73,11 +82,11 @@ public class lista_exercicios {
         System.out.println("Insira a Temperatura: ");
         double celsius = sc.nextDouble();
         
-        System.out.println("Em F Ã©: "+ (9*celsius+160)/5);
+        System.out.println("temperatura em F: "+ (9*celsius+160)/5);
     }
     
     static void q5(){
-        System.out.println("Digite a contaÃ§Ã£o: ");
+        System.out.println("Digite a contação: ");
         double cotacao = sc.nextDouble();
         System.out.println("Digite a dolar: ");
         double dolar = sc.nextDouble();
@@ -88,7 +97,7 @@ public class lista_exercicios {
 
     System.out.println("valor depositado");
     double valorPolpanca = sc.nextDouble();
-    System.out.println("seu rendimento Ã© de: "+(valorPolpanca * 0.07));
+    System.out.println("seu rendimento é de: "+(valorPolpanca * 0.07));
     
     
 }
@@ -96,7 +105,7 @@ public class lista_exercicios {
     static void q7(){
         System.out.println("valor da compra: ");
         double prestao =sc.nextDouble();
-        System.out.println("a prestaÃ§ao fica de :"+prestao/5);
+        System.out.println("a prestação fica de :"+prestao/5);
     }
     
     static void q8(){
@@ -104,7 +113,7 @@ public class lista_exercicios {
         double custo = sc.nextDouble();
         System.out.println("percentual de :");
         double percentual = sc.nextDouble();
-        System.out.println("valor do produto Ã© de :"+(custo*percentual));
+        System.out.println("valor do produto é de :"+(custo*percentual));
 }
     
     static void q9(){
@@ -292,5 +301,114 @@ public class lista_exercicios {
 
 
 	}
+
+	static void q23(){
+		System.out.println("maçãs compradas:");
+		double maca = sc.nextDouble();
+		if(maca <12){
+			System.out.println("total a pagar"+(maca*1.30));
+		}else{
+			System.out.println("total a pagar"+(maca*1.00));
+		}
+	}
+
+	static void q24(){
+		System.out.println("notas:");
+		double nota1 = sc.nextDouble();
+		double nota2 = sc.nextDouble();
+		double media =((nota1+nota2)/2);
+		if(media >=6){
+			System.out.println("aprovado com media: "+media);
+		}else{
+			System.out.println("reprovado com media: "+media);
+		}
+	}
+	
+	static void q25(){
+		System.out.println("ano atual: ");
+		int anoAtual = sc.nextInt();
+		System.out.println("ano de nascimento: ");
+		int anoNascimento = sc.nextInt();
+		int idade = (anoAtual-anoNascimento);
+		if(idade >=16){
+			System.out.println("pode votar nesse ano: ");
+		}else{
+			System.out.println("não pode votar nesse ano: ");
+		}
+		
+		
+	}
+	
+	static void q26(){
+		System.out.println("valores:");
+		double num1 = sc.nextDouble();
+		double num2 = sc.nextDouble();
+		if(num1>num2){
+			System.out.println(num1);
+		}else{
+			System.out.println(num2);
+		}
+	}
+
+	static void q27(){
+		System.out.println("valores:");
+		double num1 = sc.nextDouble();
+		double num2 = sc.nextDouble();
+		if(num1>num2){
+			System.out.println(num2+"\n"+num1);
+		}else{
+			System.out.println(num1+"\n"+num2);
+		}
+	}
+	
+	static void q28(){
+		System.out.println("inicio do jogo:");
+		int inicio = sc.nextInt();
+		System.out.println("final do jogo:");
+		int finale = sc.nextInt();
+		
+		int horas = (finale-inicio);
+		if(horas <24){
+			System.out.println("o jogo esta no tempo, com "+horas+"horas");
+		}else{
+			System.out.println("limite de 24h exercido, o jogo esta com "+horas+"horas");
+		}
+		
+	}
+	
+	static void q29(){
+		double salarioHora, horasTrabalhadas, horasExtras, salarioHoraExtra;
+		double salarioExtra, salarioFinal;
+		System.out.println("horas trabalhadas");
+		horasTrabalhadas =sc.nextDouble();
+		System.out.println("salario por hora de trabalho:");
+		salarioHora =sc.nextDouble();
+		
+		horasExtras =(horasTrabalhadas-160);
+		salarioHoraExtra = (salarioHora+(salarioHora*0.5));
+		salarioExtra = (salarioHoraExtra*horasExtras);
+		salarioFinal = ((salarioHoraExtra * horasExtras)+(160*salarioHora));
+		
+		System.out.println("Salario: "+(160*salarioHora));
+		System.out.println("salario das horas extras: "+salarioExtra);
+		System.out.println("salario final "+salarioFinal);
+		
+	}
+	
+	static void q30(){
+		System.out.println("seu nome:");
+		String nome = sc.nextLine();
+		System.out.println("sua altura:");
+		double altura = sc.nextDouble();
+		System.out.println("seu sexo:");
+		String sexo = sc.nextLine();
+		
+		if(sexo == "m"){
+			System.out.println("seu peso ideal: "+((72.7*altura)-58));
+		}if (sexo == "f"){
+			System.out.println("seu peso ideal: "+((62.1*altura)-44.7));
+		}
+	}
+
 }
 
