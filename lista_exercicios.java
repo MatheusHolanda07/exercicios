@@ -35,6 +35,8 @@ public class lista_exercicios {
 		//q28();
 		//q29();
 		//q30();
+		//q31();
+		//q32();
 	}
 
 	static Scanner sc = new Scanner(System.in);
@@ -410,5 +412,39 @@ public class lista_exercicios {
 		}
 	}
 
+	static void q31(){
+		System.out.println("salario fixo:");
+		double salario = sc.nextDouble();
+		System.out.println("valor das vendas :");
+		double valorVendas = sc.nextDouble();
+		if(valorVendas <=1500){
+			double valorFinal = (salario+(valorVendas*0.3));
+			System.out.println("salario final de: "+valorFinal);
+		}else{
+			double valorFinal = (salario+(valorVendas*0.5));
+			System.out.println("salario final de : "+valorFinal);
+		}
+	}
+
+	static void q32(){
+		System.out.println("numero da conta: ");
+		double conta = sc.nextDouble();
+		System.out.println("seu saldo: ");
+		double saldo = sc.nextDouble();
+		System.out.println("seu debito: ");
+		double debito= sc.nextDouble();
+		System.out.println("seu credito: ");
+		double credito = sc.nextDouble();
+		
+		double saldoAtual = ((saldo-debito)+credito);
+		if(saldoAtual>0){
+			System.out.println("saldo positivo de :"+saldoAtual);
+		}else{
+			System.out.println("saldo negativo de :"+saldoAtual);
+		}
+		
+	}
+	
+	
 }
 
