@@ -46,7 +46,20 @@ public class lista_exercicios {
 		//q39();
 		//q40();
 		//q41();
-		
+		////q42();
+		//q43();
+		////q44();
+		//q45();
+		//q46();
+		//q47();
+		//q48();
+		//q49();
+		//q50();
+		//q51();
+		//q52();
+		////q53();
+		//q54();
+		//q55();
 	}
 
 	static Scanner sc = new Scanner(System.in);
@@ -597,8 +610,257 @@ public class lista_exercicios {
 		System.out.println(z+" "+resposta);
 	}
 	
+	static void q42(){
+		System.out.println("tipo de combustivel A ou G");
+		String tipo = sc.next();
+		if(tipo == "g"){
+			System.out.println("litros de gasolina: ");
+			double litros = sc.nextInt();
+			if(litros <=20){
+				litros = (3.30*(litros*0.3));
+			}
+		}if(tipo== "a"){
+			System.out.println("litros de alcool: ");
+			double litros = sc.nextDouble();
+			if(litros <=20){
+				litros = (2.90*(litros));
+			}
+		}
+	}
+	
+	static void q43(){
+		System.out.println("homems ");
+		int homem1 = sc.nextInt();
+		int homem2 = sc.nextInt();
+		System.out.println("mulheres ");
+		int mulher1 = sc.nextInt();
+		int mulher2 = sc.nextInt();
+		
+		if(homem1>homem2 && mulher1>mulher2){
+			System.out.println("soma "+(homem1+mulher2)+" soma "+(homem2+mulher1));
+		}if(homem1<homem2 && mulher1<mulher2){
+			System.out.println("soma"+(homem2+mulher1)+" soma "+(homem1+mulher2));
+		}if(homem1<homem2 && mulher1>mulher2){
+			System.out.println("soma"+(homem2+mulher2)+" soma "+(homem1+mulher1));
+		}if(homem1>homem2 && mulher1<mulher2){
+			System.out.println("soma"+(homem1+mulher1)+" soma "+(homem2+mulher2));
+		}
+		
+		
+	}
+	
+	//static void q44(){}
 	
 	
+	static void q45(){ 
+		int codigo = 1234;
+		int senha = 9999;
+		System.out.println("codigo: ");
+		int usuario = sc.nextInt();
+		while(usuario !=1234){
+			System.out.println("codigo invalido");
+			usuario = sc.nextInt();
+		}
+		System.out.println("senha: ");
+		int senhaUsu = sc.nextInt();
+		while(senhaUsu!=9999){
+			System.out.println("senha incorreta");
+			senhaUsu = sc.nextInt();
+		}
+		System.out.println("acesso permitido");
+	}
 	
+	static void q46(){
+		boolean a=true;
+		boolean b=true;
+		boolean c=false;
+		
+		System.out.println("A e B: "+(a&b)+" A ou B: "+(a|b));
+		System.out.println("A ou B: "+(a|b)+" A e C: "+(a&c));
+		System.out.println("A ou C e B ou A e não B: "+(a|c&(b|a&(!b))));
+	}
+	
+	
+	static void q47(){
+		System.out.println("produto: ");
+		String produto =sc.next();
+		System.out.println("quantidade: ");
+		int quantidade = sc.nextInt();
+		System.out.println("preço: ");
+		double preco = sc.nextDouble();
+		
+		double total = (quantidade *preco);
+		if(quantidade <=5){
+			double totalPagar = (total-(total*0.2));
+			System.out.println("total a pagar: "+totalPagar);
+		}
+		if(quantidade >5 && quantidade <=10){
+			double totalPagar = (total-(total*0.3));
+			System.out.println("total a pagar: "+totalPagar);
+		}
+		if(quantidade >10){
+			double totalPagar = (total-(total*0.5));
+			System.out.println("total a pagar: "+totalPagar);
+		}
+	}
+
+	static void q48(){
+		System.out.println("codigo :");
+		int cogido = sc.nextInt();
+		System.out.println("nasceu em: ");
+		int nasceu = sc.nextInt();
+		System.out.println("ingresso na empressa :");
+		int entrou = sc.nextInt();
+		
+		int idade = (2019-nasceu);
+		int tempoEmpregado = (2019-entrou);
+		
+		if(idade>=65){
+			System.out.println("requerer aposentadoria ");
+		}if(tempoEmpregado >=30){
+			System.out.println("requerer aposentadoria ");
+		}if(idade ==60 && tempoEmpregado ==25){
+			System.out.println("requerer aposentadoria ");
+		}if(idade <65 || tempoEmpregado<25){
+			System.out.println("Não requer ");
+		}
+		
+	}
+
+	static void q49(){
+		String mens;
+		System.out.println("a,b,c");
+		int a = sc.nextInt();
+		int b = sc.nextInt();
+		int c = sc.nextInt();
+	
+		if((a<(b+c))&&(b<(a+c))&&(c<(a+b))){
+			if((a==b)&&(b==c)){
+				 mens = "triangulo isósceles"; 
+			}else{
+				 mens = "triangulo escaleno";
+			}
+		}else{
+			 mens = "não é possivel"; 
+		}
+		System.out.println(mens);
+	}
+
+	static void q50(){
+		double valor1,valor2;
+		System.out.println("valor um: ");
+		 valor1 = sc.nextDouble();
+		System.out.println("valor dois: ");
+		 valor2 = sc.nextDouble();
+		if(valor2 == 0){
+			System.out.println("insira o valor dois !0: ");
+			valor2 = sc.nextDouble();
+		}
+		System.out.println("divisão: "+valor1+"/"+valor2+" = "+(valor1/valor2));
+	}
+
+	static void q51(){
+		double valor1,valor2;
+		System.out.println("valor um: ");
+		 valor1 = sc.nextDouble();
+		System.out.println("valor dois: ");
+		 valor2 = sc.nextDouble();
+		while(valor2 == 0){
+			System.out.println("insira o valor dois !0: ");
+			valor2 = sc.nextDouble();
+		}
+		System.out.println("divisão: "+valor1+"/"+valor2+" = "+(valor1/valor2));
+	
+	}
+
+	static void q52(){
+		char resposta;
+		System.out.println("x");
+		double x = sc.nextDouble();
+		System.out.println("y");
+		double y = sc.nextDouble();
+		if(y==0){
+			System.out.println("VALOR INVALIDO");
+		}else{
+		
+		double z =((x*y)+5);
+		if(z<=0){
+			resposta = 'A';
+		}if(z>=100){
+			resposta = 'B';
+		}else{
+			resposta = 'C';
+		}
+		System.out.println(z+" "+resposta);
+		}
+		
+	}
+	
+	static void q53(){
+		double litros;
+		System.out.println("tipo de combustivel A ou G");
+		String tipo = sc.next();
+		if(tipo == "g"){
+			System.out.println("litros de gasolina: ");
+			litros = sc.nextInt();
+			if(litros ==0){
+				System.out.println("VALOR INVALIDO");
+			}else{
+			if(litros <=20){
+				litros = (3.30*(litros*0.3));
+			}
+			}if(tipo== "a"){
+			System.out.println("litros de alcool: ");
+			 litros = sc.nextDouble();
+			if(litros <=20){
+				litros = (2.90*(litros));
+			}
+		}
+	}
+	}
+	
+	static void q54(){
+		System.out.println("nota1 :");
+		double nota1 = sc.nextDouble();
+		while(nota1<0 || nota1>10){
+			System.out.println("valor invalido");
+			nota1 = sc.nextDouble();
+		}
+		System.out.println("nota2 :");
+		double nota2 = sc.nextDouble();
+		while(nota2<0 || nota2>10){
+			System.out.println("valor invalido");
+			nota2 = sc.nextDouble();
+		}
+		double media =((nota1+nota2)/2);
+		
+		System.out.println("media do aluno: "+media);
+	}
+	
+	static void q55(){
+	
+	int codigo = 1234;
+	int senha = 9999;
+	int opc = 1;
+	while(opc != 0){
+	System.out.println("codigo: ");
+	int usuario = sc.nextInt();
+	while(usuario !=1234){
+		System.out.println("codigo invalido");
+		usuario = sc.nextInt();
+	}
+	System.out.println("senha: ");
+	int senhaUsu = sc.nextInt();
+	while(senhaUsu!=9999){
+		System.out.println("senha incorreta");
+		senhaUsu = sc.nextInt();
+	}
+	System.out.println("acesso permitido");
+	
+	System.out.println("novo acesso: S{1}/N{0} ");
+	opc = sc.nextInt();
+	}
 }
 
+
+}
