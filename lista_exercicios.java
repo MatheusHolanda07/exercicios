@@ -37,6 +37,16 @@ public class lista_exercicios {
 		//q30();
 		//q31();
 		//q32();
+		//q33();
+		//q34();
+		//q35();
+		//q36();
+		//q37();
+		//q38();
+		//q39();
+		//q40();
+		//q41();
+		
 	}
 
 	static Scanner sc = new Scanner(System.in);
@@ -444,6 +454,150 @@ public class lista_exercicios {
 		}
 		
 	}
+	
+	static void q33(){
+		System.out.println("estoque atual: ");
+		int atual = sc.nextInt();
+		System.out.println("estoque maximo: ");
+		double maxima = sc.nextDouble();
+		System.out.println("estoque minimo: ");
+		double minima = sc.nextDouble();
+		
+		double media = ((maxima+minima)/2);
+		if(atual>=media){
+			System.out.println("nao efetuar compra: ");			
+		}else{
+			System.out.println("efetuar compra: ");
+		}
+	}
+	
+	static void q34(){
+		System.out.println("valor: ");
+		double valor = sc.nextDouble();
+		
+		if(valor>=0){
+			System.out.println("valor positivo: "+valor);
+		}else{
+			System.out.println("valor negativo: "+valor);
+		}
+		
+	}
+	
+	static void q35(){
+		System.out.println("valores : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+		
+		if(num1>num2 && num1>num3){
+			System.out.println("maior: "+num1);
+		}if(num1<num2 && num2>num3){
+			System.out.println("maior: "+num2);
+		}else{
+			System.out.println("maior "+num3);
+		}
+		
+	}
+	
+	static void q36(){
+		System.out.println("valores : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+		
+		if(num1>num2 && num2>num3){
+			System.out.println("soma: "+(num1+num2));
+		}if(num1>num2 && num3>num2){
+			System.out.println("soma: "+(num1+num3));
+		}if(num2>num1 && num3>num1){
+			System.out.println("soma: "+(num2+num3));
+		}
+	}
+	
+	static void q37(){
+		System.out.println("valores : ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		int num3 = sc.nextInt();
+		
+		if(num1>num2 && num2>num3){
+			System.out.println(num3+" "+ num2+" "+ num1);
+		}if(num1>num2 && num3>num2){
+			System.out.println(num2+" "+num3+" "+num1);
+		}if(num2>num1 && num3>num1){
+			System.out.println(num1+" "+num3+" "+num2);
+		}
+		
+	}
+	
+	static void q38(){
+		System.out.println("valores: ");
+		double lado1 = sc.nextDouble();
+		double lado2 = sc.nextDouble();
+		double lado3 = sc.nextDouble();
+		
+		if((lado1<(lado2+lado3))&&(lado2<(lado1+lado3))&&(lado3<(lado1+lado2))){
+			System.out.println("é um triangulo valido ");
+		}else{
+			System.out.println("nao é um triangulo valido ");
+		}
+		
+	}
+	
+	static void q39(){
+		System.out.println("casa: ");
+		String time1 = sc.nextLine();
+		System.out.println("fora: ");
+		String time2 = sc.nextLine();
+		System.out.println("gols da casa: ");
+		int gols1 = sc.nextInt();
+		
+		
+		System.out.println("gols do visitante: ");
+		int gols2 = sc.nextInt();
+		
+		if(gols1>gols2){
+			System.out.println("o time "+time1+" ganhou");
+		}if(gols1==gols2){
+			System.out.println("EMPATE");
+		}else{
+			System.out.println("o time "+time2+" ganhou");
+		}
+	}
+	
+	static void q40(){
+		System.out.println("valores: ");
+		int num1 = sc.nextInt();
+		int num2 = sc.nextInt();
+		
+		if(num1>num2){
+			System.out.println("primeiro maior que o segundo");
+		}if(num2>num1){
+			System.out.println("segundo maior que o primeiro");
+		}if(num1 ==num2){
+			System.out.println("numeros iguais");
+		}
+	}
+	
+	static void q41(){
+		char resposta;
+		System.out.println("x");
+		double x = sc.nextDouble();
+		System.out.println("y");
+		double y = sc.nextDouble();
+		
+		double z =((x*y)+5);
+		if(z<=0){
+			resposta = 'A';
+		}if(z>=100){
+			resposta = 'B';
+		}else{
+			resposta = 'C';
+		}
+		System.out.println(z+" "+resposta);
+	}
+	
+	
 	
 	
 }
