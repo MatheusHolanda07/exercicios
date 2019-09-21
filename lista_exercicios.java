@@ -46,9 +46,9 @@ public class lista_exercicios {
 		//q39();
 		//q40();
 		//q41();
-		////q42();
+		//q42();
 		//q43();
-		////q44();
+		//q44();
 		//q45();
 		//q46();
 		//q47();
@@ -57,7 +57,7 @@ public class lista_exercicios {
 		//q50();
 		//q51();
 		//q52();
-		////q53();
+		//q53();
 		//q54();
 		//q55();
 	}
@@ -611,20 +611,26 @@ public class lista_exercicios {
 	}
 	
 	static void q42(){
-		System.out.println("tipo de combustivel A ou G");
-		String tipo = sc.next();
-		if(tipo == "g"){
-			System.out.println("litros de gasolina: ");
-			double litros = sc.nextInt();
-			if(litros <=20){
-				litros = (3.30*(litros*0.3));
-			}
-		}if(tipo== "a"){
-			System.out.println("litros de alcool: ");
-			double litros = sc.nextDouble();
-			if(litros <=20){
-				litros = (2.90*(litros));
-			}
+		double desconto;
+		int combustivel;
+		System.out.print("Número de Litros vendidos: ");
+		int litro = sc.nextInt();
+
+		System.out.print("Combustível [1]-A [2]-G: ");
+		combustivel = sc.nextInt();
+
+		if (litro <= 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.03);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.05);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro <= 20 && combustivel == 1) {
+			desconto = 2.90 + (2.90 * 0.04);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 2.90 + (2.90 * 0.06);
+			System.out.println("Desconto: " + desconto);
 		}
 	}
 	
@@ -649,7 +655,40 @@ public class lista_exercicios {
 		
 	}
 	
-	//static void q44(){}
+	static void q44(){
+		double precoMa = 1.80;
+		double precoMo = 2.50;
+		double pesoMa;
+		double pesoMo;
+		double totalMo;
+		double totalMa;
+		double precoFinal;
+
+		System.out.print("Quantos Kilos de morango: ");
+		pesoMo = sc.nextDouble();
+
+		System.out.print("Quantos Kilos de maçã: ");
+		pesoMa = sc.nextDouble();
+
+		if (pesoMo > 5) {
+			totalMo = (precoMo - 0.3) * pesoMo;
+		} else {
+			totalMo = precoMo * pesoMo;
+		}
+
+		if (pesoMa > 5) {
+			totalMa = (precoMa - 0.3) * pesoMa;
+		} else {
+			totalMa = precoMa * pesoMa;
+		}
+		if ((totalMo + totalMa) > 25 || (pesoMo + pesoMa) > 8) {
+			precoFinal = (totalMo + totalMa) * 0.9;
+		} else {
+			precoFinal = totalMo + totalMa;
+		}
+
+		System.out.println("Preço finl da compra: R$" + precoFinal);
+	}
 	
 	
 	static void q45(){ 
@@ -797,26 +836,28 @@ public class lista_exercicios {
 	}
 	
 	static void q53(){
-		double litros;
-		System.out.println("tipo de combustivel A ou G");
-		String tipo = sc.next();
-		if(tipo == "g"){
-			System.out.println("litros de gasolina: ");
-			litros = sc.nextInt();
-			if(litros ==0){
-				System.out.println("VALOR INVALIDO");
-			}else{
-			if(litros <=20){
-				litros = (3.30*(litros*0.3));
-			}
-			}if(tipo== "a"){
-			System.out.println("litros de alcool: ");
-			 litros = sc.nextDouble();
-			if(litros <=20){
-				litros = (2.90*(litros));
-			}
+
+		double desconto;
+		int combustivel;
+		System.out.print("Número de Litros vendidos: ");
+		int litro = sc.nextInt();
+
+		System.out.print("Combustível [1]-A [2]-G: ");
+		combustivel = sc.nextInt();
+
+		if (litro <= 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.03);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 3.30 + (3.30 * 0.05);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro <= 20 && combustivel == 1) {
+			desconto = 2.90 + (2.90 * 0.04);
+			System.out.println("Desconto: " + desconto);
+		} else if (litro > 20 && combustivel == 2) {
+			desconto = 2.90 + (2.90 * 0.06);
+			System.out.println("Desconto: " + desconto);
 		}
-	}
 	}
 	
 	static void q54(){
